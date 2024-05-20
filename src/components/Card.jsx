@@ -3,8 +3,8 @@ import React from 'react'
 
 function Card(props) {
     return (
-
         <div className="card">
+            {props.openSpots == 0 && <div className="card--badge">SOLD OUT</div>}
             <img src={`/src/assets/images/${props.img}`} className="card--image" />
             <div className="card--stats">
                 <img src={`/src/assets/images/star.png`} className="card--star" />
@@ -15,7 +15,6 @@ function Card(props) {
             <p>{props.title}</p>
             <p><span className="bold">From ${props.price}</span> / person</p>
         </div>
-
     )
 }
 
